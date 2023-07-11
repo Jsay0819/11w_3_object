@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열 객체3 splice</title>
+  </head>
+  <body>
+    <p>splice 매서드 사용하기</p>
+    <script>
+      // 인수가 1개인 경우
+      var numbers = [1, 2, 3, 4, 5];
+      var newnumbers = numbers.splice(2);
+      //   자바에서 2는 3임 (0,1,2 -> 3을 뜻함)
+      //   splice : 지정 수 에서 뒷 숫자들 삭제 (반환) (?)
+      document.write(`반환된 배열 : ${newnumbers} <br>`);
+      document.write(`반환된 배열 : ${numbers} <br>`);
+
+      //   인수가 2개인 경우
+      var study = ["html", "css", "web", "jQuery"];
+      var newstudy = study.splice(2, 1);
+      //   (2,1) : '2에서부터 (web) 부터 1개 (web)를 삭제한다'는 뜻
+      document.write(`반환된 배열 : ${newstudy} <br>`);
+      document.write(`반환된 배열 : ${study} <br>`);
+
+      // 인수가 3개인 경우
+      var newstudy2 = study.splice(2, 1, "js");
+      // (2,1,"js") : '2에서부터 (web) 부터 1개 (web)를 삭제하고 "js"를 추가한다'는 뜻
+      document.write(`반환된 배열 : ${newstudy2} <br>`);
+      document.write(`반환된 배열 : ${study} <br>`);
+    </script>
+  </body>
+</html>

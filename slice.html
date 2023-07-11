@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열 객체4 slice</title>
+  </head>
+  <body>
+    <p>slice 매서드 이용하기</p>
+    <script>
+      // 추출한 요소로 배열 만들고 기존 배열은 변경 안됨
+      var colors = ["red", "green", "blue", "white", "black"];
+      var colors2 = colors.slice(2);
+      //인덱스 2부터 끝까지
+      console.log(colors2);
+      // blue , white , black
+
+      var colors3 = colors.slice(2, 4);
+      //   (2,4) : 2번에서 부터 4번 직전 까지를 뜻함
+      console.log(colors3);
+      //   blue , white
+    </script>
+  </body>
+</html>
